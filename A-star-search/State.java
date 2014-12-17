@@ -2,8 +2,6 @@ import java.util.Comparator;
 
 /**
  * class for search state.
- * 
- * DO NOT MODIFY.
  */
 public class State {
 	public State(String config, int realCost, int heuristicCost, String opSequence){

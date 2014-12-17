@@ -13,7 +13,6 @@ public class AStarSearchImpl implements AStarSearch {
 	
 	@Override	
 	public SearchResult search(String initConfig, int modeFlag) {
-		// TODO Add your code here
 		State S = new State(initConfig,0,getHeuristicCost(initConfig, modeFlag),"");
 
 		PriorityQueue<State> OPEN = new PriorityQueue<State>(10,S.comparator);
@@ -31,14 +30,11 @@ public class AStarSearchImpl implements AStarSearch {
 		  State temp_pop = OPEN.poll();
 		  OPEN_MAP.remove(temp_pop.config);
 		  
-//		  System.out.print(temp_pop.config+" "+temp_pop.realCost +" "+temp_pop.heuristicCost+" "+temp_pop.opSequence+"\n");
-		  
+
 		  CLOSED.add(temp_pop);
 		  CLOSED_MAP.put(temp_pop.config, temp_pop.realCost+temp_pop.heuristicCost);
 		  
 		  pop_count++;
-//		  if(pop_count % 10000 == 0)
-//				System.out.println(pop_count);
 				
 		  if(checkGoal(temp_pop.config))
 		  {
@@ -113,7 +109,6 @@ public class AStarSearchImpl implements AStarSearch {
 
 	@Override
 	public boolean checkGoal(String config) {
-		// TODO Add your code here
 		char config_arr[] = config.toCharArray();
 		int[] blk_num = {6,7,8,11,12,15,16,17};		
 		char initial = config_arr[6];
@@ -127,7 +122,6 @@ public class AStarSearchImpl implements AStarSearch {
 
 	@Override
 	public String move(String config, char op) {
-		// TODO Add your code here
 		if( op >= 'A' && op < 'I')
 		{
 		  char config_arr[] = config.toCharArray();
@@ -154,7 +148,7 @@ public class AStarSearchImpl implements AStarSearch {
 
 	@Override
 	public int getHeuristicCost(String config, int modeFlag) {		
-		// TODO Add your code here
+
 		char config_arr[] = config.toCharArray();
 		int[] blk_num = {6,7,8,11,12,15,16,17};
 		int n1=0,n2=0,n3=0;

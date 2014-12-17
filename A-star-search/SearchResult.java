@@ -10,15 +10,15 @@ public class SearchResult {
 	int numPoppedStates;		// the number of states popped from the queue 
 	
 	/**
-	 * Print the number of states popped from priority queue.
-	 * If initial state is already the goal state, then it should be 1.
+	 * Prints the number of states popped from priority queue.
+	 * If initial state is already the goal state, then it will be 1.
 	 */
 	public void printNumPoppedStates(){
 		System.out.println(this.numPoppedStates);
 	}
 	/**
-	 * Print the operation sequence. If initial state is already the goal state, then 
-	 * print "no moves needed"
+	 * Prints the operation sequence. If initial state is already the goal state, then 
+	 * prints "no moves needed"
 	 */
 	public void printOpSeq(){
 		if (this.opSequence != ""){
