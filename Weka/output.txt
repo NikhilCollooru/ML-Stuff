@@ -1,0 +1,35 @@
+J48 pruned tree
+------------------
+
+thal = fixed_defect
+|   ca <= 0: negative (4.0)
+|   ca > 0: positive (6.0)
+thal = normal
+|   ca <= 0: negative (74.0/8.0)
+|   ca > 0
+|   |   cp = typ_angina: negative (5.0/1.0)
+|   |   cp = asympt: positive (11.0/1.0)
+|   |   cp = non_anginal: negative (8.0)
+|   |   cp = atyp_angina: negative (5.0)
+thal = reversable_defect
+|   trestbps <= 108: negative (5.0)
+|   trestbps > 108
+|   |   cp = typ_angina: negative (4.0/1.0)
+|   |   cp = asympt
+|   |   |   oldpeak <= 0.6
+|   |   |   |   chol <= 240
+|   |   |   |   |   chol <= 192: positive (3.0/1.0)
+|   |   |   |   |   chol > 192: negative (3.0)
+|   |   |   |   chol > 240: positive (8.0)
+|   |   |   oldpeak > 0.6: positive (43.0)
+|   |   cp = non_anginal
+|   |   |   exang = no
+|   |   |   |   ca <= 0: negative (5.0)
+|   |   |   |   ca > 0: positive (9.0/2.0)
+|   |   |   exang = yes: positive (3.0)
+|   |   cp = atyp_angina: positive (4.0/1.0)
+
+Number of Leaves  : 	17
+
+Size of the tree : 	28
+
